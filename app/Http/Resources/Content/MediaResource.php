@@ -17,7 +17,7 @@ class MediaResource extends Resource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'path' => $this->path,
+            'content' => $this->content,
             'type' => $this->type,
             'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
