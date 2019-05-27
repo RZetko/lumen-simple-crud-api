@@ -14,3 +14,10 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->get('article/{id}', ['uses' => 'Content\ArticleController@getArticle']);
+$router->get('articles', ['uses' => 'Content\ArticleController@getArticles']);
+$router->post('article', ['uses' => 'Content\ArticleController@createArticle']);
+$router->patch('article/{id}', ['uses' => 'Content\ArticleController@editArticle']);
+$router->delete('article/{id}', ['uses' => 'Content\ArticleController@deleteArticle']);
