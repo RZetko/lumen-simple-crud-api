@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Content;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
+use App\Http\Controllers\Controller;
 use App\Models\Content\Article;
 use App\Http\Resources\Content\ArticleResource;
 use Symfony\Component\HttpKernel\Exception\HttpException;
