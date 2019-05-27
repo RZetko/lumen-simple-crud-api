@@ -42,7 +42,7 @@ class ArticleController extends Controller
 
         $newArticle = new Article;
 
-        $newArticle->content = $request->content; // TODO HTML PURIFYING
+        $newArticle->content = clean($request->content);
         $newArticle->save();
 
         if (!$newArticle) {
@@ -72,7 +72,7 @@ class ArticleController extends Controller
             throw new ModelNotFoundException('Article not found', 404);
         }
 
-        $article->content = $request->content; // TODO HTML PURIFYING
+        $article->content = clean($request->content);
         $article->save();
 
         return response()->json([

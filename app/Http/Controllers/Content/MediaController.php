@@ -98,8 +98,8 @@ class MediaController extends Controller
 
         $newMedia = new Media;
 
-        $newMedia->type = $request->type;
-        $newMedia->content = $request->content; // TODO HTML PURIFYING
+        $newMedia->type = strip_tags(trim($request->type));
+        $newMedia->content = strip_tags(trim($request->content)); 
         $newMedia->save();
 
         if (!$newMedia) {
