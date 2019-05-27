@@ -13,6 +13,9 @@ class Article extends Model
      */
     protected $fillable = [
         'content',
+        'media_id',
+        'title',
+        'subtitle',
     ];
 
     /**

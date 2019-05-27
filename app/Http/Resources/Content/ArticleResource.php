@@ -16,7 +16,10 @@ class ArticleResource extends Resource
     {
         return [
             'id' => $this->id,
-            'content' => $this->name,
+            'content' => $this->content,
+            'thumbnail' => $this->thumbnail->path,
+            'title' => $this->title,
+            'subtitle' => $this->subtitle,    
             'updated_at' => $this->updated_at,
             'created_at' => $this->created_at,
         ];
