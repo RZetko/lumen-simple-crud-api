@@ -21,3 +21,8 @@ $router->get('articles', ['uses' => 'Content\ArticleController@getArticles']);
 $router->post('article', ['uses' => 'Content\ArticleController@createArticle']);
 $router->patch('article/{id}', ['uses' => 'Content\ArticleController@editArticle']);
 $router->delete('article/{id}', ['uses' => 'Content\ArticleController@deleteArticle']);
+
+$router->get('media/{id}', 'Content\MediaController@getMedia');
+$router->get('media', 'Content\MediaController@getMedias');
+$router->post('media/generic', 'Contetn\MediaController@createGenericMedia');
+$router->post('media/image', 'Contetn\MediaController@createImageMedia');
