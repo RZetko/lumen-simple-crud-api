@@ -23,4 +23,9 @@ class Article extends Model
     protected $hidden = [
 
     ];
+
+    public function thumbnail()
+    {
+        return $this->belongsTo('App\Models\Content\Media', 'media_id');
+    }
 }

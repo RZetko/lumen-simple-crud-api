@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Media extends Model
 {
+    protected $table = 'media';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -25,4 +27,9 @@ class Media extends Model
     protected $hidden = [
 
     ];
+
+    public function articles()
+    {
+        return $this->hasMany('App\Models\Content\Article');
+    }
 }
